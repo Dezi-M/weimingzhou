@@ -23,6 +23,7 @@
 - 主角、配角、普通人、敌人都要智商在线。错误来自信息差、时间压力、身体代价、私心和取舍，不能来自突然变笨。
 - 已同步外部 `weimingzhou-novel-writer` 与 `weimingzhou-chapter-outliner`：不再默认读取旧阶段补丁；若账本声明 001 起大修，则旧稿最新章号不再作为续写入口。
 - 已继续同步外部 `weimingzhou-novel-writer` 与 `weimingzhou-chapter-outliner`：章纲和续写会先问“哪块地球正在被拆卖/押运/登记/改用途，未名舟怎么抢回，抢回后变成什么生活或战斗能力”。
+- 已补齐外部审查类 Skill 同步：`weimingzhou-chapter-auditor`、`weimingzhou-ten-chapter-reviewer`、`weimingzhou-volume-auditor` 和章纲 `precheck` 均已加入“生存压力、行动爽感、地球组件收益、慢一步失去什么、章末实体残留”的默认观察面，避免只审规则聪明、资产账和白纸结算。
 - 已追加终篇大作级底层口径：章纲和续写会轻轻照看“终名 vs 复名”，即敌人把人、物、船、城、世界锁成最终用途，未名舟证明它们仍有改变余地。
 - 已同步 `23_001-005重构章纲_终名复名开篇.md`：001-005 重写时，它是当前执行章纲；外部 `weimingzhou-novel-writer` 与 `weimingzhou-chapter-outliner` 应先读它，再碰旧稿素材。
 
