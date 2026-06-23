@@ -90,13 +90,13 @@ func drawGoldCharacter(_ char: String, center: CGPoint, size: CGFloat, rotation:
     transform.concat()
 
     let emberGlow = NSShadow()
-    emberGlow.shadowColor = NSColor(red: 0.95, green: 0.11, blue: 0.02, alpha: 0.32)
-    emberGlow.shadowBlurRadius = canvas.width * 0.014
+    emberGlow.shadowColor = NSColor(red: 1.00, green: 0.30, blue: 0.04, alpha: 0.30)
+    emberGlow.shadowBlurRadius = canvas.width * 0.015
     emberGlow.shadowOffset = .zero
 
     let blackDrop = NSShadow()
     blackDrop.shadowColor = NSColor.black.withAlphaComponent(0.98)
-    blackDrop.shadowBlurRadius = canvas.width * 0.020
+    blackDrop.shadowBlurRadius = canvas.width * 0.022
     blackDrop.shadowOffset = NSSize(width: 0, height: -canvas.height * 0.005)
 
     drawText(
@@ -105,7 +105,7 @@ func drawGoldCharacter(_ char: String, center: CGPoint, size: CGFloat, rotation:
         font: titleFont(size: size),
         fill: NSColor(red: 0.020, green: 0.010, blue: 0.004, alpha: 0.96),
         stroke: NSColor.black.withAlphaComponent(0.98),
-        strokeWidth: size * 0.076,
+        strokeWidth: size * 0.082,
         shadow: blackDrop,
         kern: 0
     )
@@ -114,9 +114,9 @@ func drawGoldCharacter(_ char: String, center: CGPoint, size: CGFloat, rotation:
         char,
         in: rect,
         font: titleFont(size: size),
-        fill: NSColor(red: 1.00, green: 0.78, blue: 0.32, alpha: 0.98),
+        fill: NSColor(red: 1.00, green: 0.93, blue: 0.46, alpha: 0.99),
         stroke: NSColor(red: 0.075, green: 0.030, blue: 0.012, alpha: 0.98),
-        strokeWidth: size * 0.036,
+        strokeWidth: size * 0.040,
         shadow: emberGlow,
         kern: 0
     )
@@ -125,7 +125,7 @@ func drawGoldCharacter(_ char: String, center: CGPoint, size: CGFloat, rotation:
         char,
         in: rect.offsetBy(dx: 0, dy: size * 0.035),
         font: titleFont(size: size),
-        fill: NSColor(red: 1.00, green: 0.98, blue: 0.66, alpha: 0.34),
+        fill: NSColor(red: 1.00, green: 0.99, blue: 0.78, alpha: 0.50),
         stroke: .clear,
         strokeWidth: 0,
         shadow: nil,
@@ -144,14 +144,14 @@ func drawGoldCharacter(_ char: String, center: CGPoint, size: CGFloat, rotation:
 }
 
 func drawFloatingTitle(on canvas: NSSize) {
-    let size = canvas.width * 0.190
+    let size = canvas.width * 0.185
     let chars = ["未", "名", "舟"]
     let centers = [
-        CGPoint(x: canvas.width * 0.245, y: canvas.height * 0.735),
-        CGPoint(x: canvas.width * 0.178, y: canvas.height * 0.620),
-        CGPoint(x: canvas.width * 0.252, y: canvas.height * 0.505)
+        CGPoint(x: canvas.width * 0.350, y: canvas.height * 0.690),
+        CGPoint(x: canvas.width * 0.500, y: canvas.height * 0.750),
+        CGPoint(x: canvas.width * 0.650, y: canvas.height * 0.690)
     ]
-    let rotations: [CGFloat] = [-6, 4, -4]
+    let rotations: [CGFloat] = [-12, 0, 12]
 
     for i in 0..<3 {
         drawGoldCharacter(chars[i], center: centers[i], size: size, rotation: rotations[i], canvas: canvas)
